@@ -1,4 +1,3 @@
-'use strict';
 //General
 var MOBILE_WIDH = 930;
 var WINDOW_W = $(window).width();
