@@ -4,4 +4,4 @@ var tari_eu = ["romania", "moldova", "germania", "spania", "franta", "rusia","it
 
 var firme = ["google", "yahoo", "microsoft", "oracle", "amazon", "emag", "ebay", "apple", "siemens", "intel", "toyota", "dacia", "volvo"];
 
-var ldp = ["javascript", "html", "css", "java", "c", "c++", "ruby", "pascal", "lisp", "erlang", "sql", "python"];
+var ldp = ["javascript", "html", "css", "java", "c", "c++", "ruby", "pascal", "lisp", "erlang", "sql", "python", "perl", "lua"];

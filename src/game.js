@@ -58,7 +58,7 @@ function newGame(wordList) {
 
 // DOM Elements & Events
 $(document).ready(function() {
-  $('.footer-content').append("<p><span>Spanzuratoarea</span> <em>created by</em>" + "<span>@<a href=\"http://www.twitter.com/niutenisu\">Niutenisu</a></span><p>");
+  //$('.footer-content').append("<p><span>Spanzuratoarea</span> <em>created by</em>" + "<span>@<a href=\"http://www.twitter.com/niutenisu\">Niutenisu</a></span><p>");
 
   var listaCuvinte = localStorage.getItem("listaCuvinte");
   if (listaCuvinte != null) {
@@ -74,6 +74,9 @@ $(document).ready(function() {
     // eval for transforming string into object ref!!!
     newGame(eval($(this).prev().val())); // POSSIBLE EXPLOIT!!
     // prev for mobile <3
+    /* On the page are two elements that have select[name=lista_cuvinte]
+     * We use next() for the button and prev() to get the value of the
+     * sellection. */
   });
 
   $('#game').fadeIn("slow");
@@ -135,7 +138,7 @@ function gameWon() {
   $(document).on("keypress", function(e) {
     var key = e.keyCode || e.which;
     if (key == 13)
-      window.location.reload(); // Da reset la handlere :-)
+      window.location.reload(); // Reset handlers :-)
   });
 }
 

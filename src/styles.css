@@ -154,14 +154,21 @@
 				margin: 0px 10px 0px 10px;
 				padding-top: 15px;
 		}
+		.footer-content * {
+				display: inline;
+		}
 		.footer-content span {
 				color: #e9f5fa;
 				font-weight: bold;
 		}
+		.right {
+				float: right;
+				margin-right: 20px;
+		}
 		.mobile {
 				display: none;
 		}
-		/* Mobile shit */
+		/* Mobile CSS */
 
 		@media only screen and (max-width: 930px) {
 				.mobile {
