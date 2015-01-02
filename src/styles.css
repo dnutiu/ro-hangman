@@ -16,7 +16,8 @@
 				-moz-text-stroke: 1px #375449;
 				-o-text-stroke: 1px #375449;
 				text-stroke: 1px #375449;
-				font-family: "Arial Black", Gadget, sans-serif;
+				font-family: "Impact", "Arial Black";
+				letter-spacing: 2px;
 				font-style: oblique;
 				font-variant: small-caps;
 				font-size: 50px;
@@ -25,6 +26,7 @@
 		h2,
 		h4 {
 				color: #224557;
+				font-family: Verdana;
 		}
 		h3,
 		h5 {
@@ -36,7 +38,7 @@
 		}
 		a {
 				text-decoration: none;
-				font-family: "Trebuchet MS", sans-serif, Helvetica, Verdana, Arial;
+				font-family: "Trebuchet MS", Helvetica, Arial;
 				color: #e9f5fa;
 				font-size: 15px;
 		}
@@ -49,7 +51,7 @@
 				transition: color 0.5s;
 		}
 		footer {
-				font-family: sans-serif, Helvetica, Arial;
+				font-family: sans-serif, Helvetica, Verdana;
 				color: #c9e7f3;
 				background-color: #8aa3c8;
 		}
@@ -63,7 +65,7 @@
 				border: solid 5px black;
 				background-color: #C9E7F3;
 				border-radius: 20px;
-				font-family: sans-serif, Helvetica, Verdana, Arial;
+				font-family: Helvetica, Verdana, Arial;
 				text-overflow: ellipsis;
 		}
 		#content {
