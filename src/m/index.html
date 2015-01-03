@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Spanzuratoarea</title>
+        <meta charset="utf-8">
+        <meta http-equiv="author" content="Niutenisu">
+        <meta name="description" content="Spanzuratoarea in limba romana!">
+        <meta name="keywords" content="spanzuratoarea, joc, gratuit, romana">
+        <meta name="viewport" content="width=device-width, initial-scale=0.9">
+        <link rel="shortcut icon" href="./favicon.ico">
+        <link rel="stylesheet" type="text/css" href="./styles.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="../sound/ion.sound.min.js"></script>
+        <script src="../words.js"></script>
+        <script src="./game.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="game">
+                    <h1>Spanzuratoarea</h1>
+                    <p class="desc">Click pe casuta si incepe sa ghicesti literele!</p>
+                </div>
+            </header>
+            <h3>Incearca sa ghicesti cuvantul: <span class="word"></span></h3>
+            <br>
+            <h4>Introdu aici litera:</h4>
+            <input name="mobile" type="text">
+            <p>VIATA: <span id="incercari"></span></p>
+            <h4 class="litera_msg" style="display: none;">Ai apasat pe "<span class="litera" style="color: red;"></span>
+            <span class="litera_msg2"></span></h4>
+            <h4 class="litere" style="color: red;"></h4>
+            <br>
+            <select name="lista_cuvinte" class="change_words">
+                <option value="animale_eu">Animale din Europa</option>
+                <option value="tari_eu">Tari din Europa</option>
+                <option value="firme">Companii</option>
+                <option value="ldp">Limbaje de programare</option>
+            </select>
+            <button class="">Schimba</button>
+        </div>
+        <footer>
+            <div class="footer-content">
+                <p>
+                <span>Spanzuratoarea</span>
+                <em>created by</em>
+                <span> @<a href="http://www.twitter.com/niutenisu">Niutenisu</a></span>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

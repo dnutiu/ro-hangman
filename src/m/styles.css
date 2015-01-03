@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+  font-size: 16px;
+}
+
+body {
+  background-color: #eef7fb;
+}
+h1 {
+  color: #8AD4B8;
+  -webkit-text-stroke: 1px #375449;
+  -moz-text-stroke: 1px #375449;
+  -o-text-stroke: 1px #375449;
+  text-stroke: 1px #375449;
+  font-family: "Impact", "Arial Black";
+  letter-spacing: 2px;
+  font-style: oblique;
+  font-variant: small-caps;
+  font-size: 2.5em;
+}
+
+.desc {
+  color: #8AD4B8;
+  -webkit-text-stroke: 1px #375449;
+  -moz-text-stroke: 1px #375449;
+  -o-text-stroke: 1px #375449;
+  text-stroke: 1px #375449;
+  font-family: "Courier New", "Courier";
+  font-size: 110%;
+  font-size: 1.3em;
+}
+
+header {
+    border-bottom: 2px solid #527f6e;
+    border-top: 2px solid #527f6e;
+    margin-bottom: 5px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  text-align: center;
+}
+
+a {
+	text-decoration: none;
+	font-family: "Trebuchet MS", Helvetica, Arial;
+	color: #e9f5fa;
+	font-size: 15px;
+}
+
+footer {
+	font-family: sans-serif, Helvetica, Verdana;
+	color: #c9e7f3;
+	background-color: #8aa3c8;
+}
+
+input[name=mobile] {
+  background-color: white;
+  border-style: solid;
+  padding: 4px;
+  border-color: #c9e7f3;
+  outline: none; 
+}
+
+.container {
+  margin: 25px auto;
+  padding: 5px;
+  min-width: 10%;
+  width: 85%;
+  min-height: 100%;
+  margin-bottom: -50px;
+  text-align: center;
+  font-family: monospace ;
+  color: #375449;
+
+}
+
+.container:after {
+  content: "";
+  display: block;
+}
+
+footer, .container:after {
+  height: 50px; 
+}

@@ -1,11 +1,3 @@
-//General
-var MOBILE_WIDH = 930;
-var WINDOW_W = $(window).width();
-var mobileSiteUrl = "/m"; // relative path
-//Redirect to MobileSite
-if (WINDOW_W <= MOBILE_WIDH) {
-    window.location.replace(mobileSiteUrl);
-}
 // Sound initialization
 ion.sound({
   sounds: [{
@@ -24,7 +16,7 @@ ion.sound({
 
   ],
   volume: 0.5,
-  path: "./sound/sounds/",
+  path: "../sound/sounds/",
   preload: true
 });
 
@@ -56,7 +48,6 @@ function newGame(wordList) {
 
   // Update page info
   $('.word').html(charArray1);
-  $("#human").attr('src', "./img/" + incercari + ".png");
   $('#incercari').html(incercari);
   $('.litera_msg2').html();
 }
@@ -84,8 +75,6 @@ $(document).ready(function() {
      * sellection. */
   });
 
-  $('#game').fadeIn("slow");
-
 });
 
 $(document).on("keypress", function(e) {
@@ -108,7 +97,6 @@ $(document).on("keypress", function(e) {
     incercari--;
 
     if (incercari > -1) {
-      $("#human").attr('src', "./img/" + incercari + ".png");
       $('#incercari').html(incercari);
       updateLetters(key2);
       if (incercari == 0)
@@ -123,54 +111,21 @@ $(document).on("keypress", function(e) {
 })
 
 function gameWon() {
-  if (WINDOW_W <= MOBILE_WIDH) {
     ion.sound.play("ta_da");
     alert("Felicita e tenersi per mano")
     window.location.reload(); // mobile
     return;
-  }
   //alert("You're winner!");
-
-  if (WINDOW_W > MOBILE_WIDH)
-    $('#gamewon').fadeIn('slow');
-  $(document).off(); // Detach keypress handler
-  ion.sound.play("ta_da"); // Play victory sound
-
-  $('#gamewon img').click(function() {
-    window.location.reload();
-  });
-
-  $(document).on("keypress", function(e) {
-    var key = e.keyCode || e.which;
-    if (key == 13)
-      window.location.reload(); // Reset handlers :-)
-  });
 }
 
 function gameOver() {
-  if (WINDOW_W <= MOBILE_WIDH) {
     ion.sound.play("sad_trombone");
     alert("Ai pierdut! CUVANT: " + word);
     window.location.reload(); // for mobile phones
     return; // for slower mobile phones
-  }
 
   $('#incercari_msg').html("Game Over!");
   $('#lose_word').html(word);
-
-  if (WINDOW_W > MOBILE_WIDH)
-    $('#gameover').fadeIn('slow');
-  $(document).off(); // Detach keypress handler
-  ion.sound.play("sad_trombone");
-
-  $('#gameover img').click(function() {
-    window.location.reload();
-  });
-  $(document).on("keypress", function(e) {
-    var key = e.keyCode || e.which;
-    if (key == 13)
-      window.location.reload();
-  });
 }
 
 function check(guess) {
