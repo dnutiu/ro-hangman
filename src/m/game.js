@@ -1,3 +1,5 @@
+var soundPath = "" // ex: ../sound/sounds/
+
 // Sound initialization
 ion.sound({
   sounds: [{
@@ -16,7 +18,7 @@ ion.sound({
 
   ],
   volume: 0.5,
-  path: "../sound/sounds/",
+  path: soundPath,
   preload: true
 });
 
