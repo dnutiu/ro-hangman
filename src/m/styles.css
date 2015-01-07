@@ -45,16 +45,16 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 a {
-	text-decoration: none;
-	font-family: "Trebuchet MS", Helvetica, Arial;
-	color: #e9f5fa;
-	font-size: 15px;
+  text-decoration: none;
+  font-family: "Trebuchet MS", Helvetica, Arial;
+  color: #e9f5fa;
+  font-size: 15px;
 }
 
 footer {
-	font-family: sans-serif, Helvetica, Verdana;
-	color: #c9e7f3;
-	background-color: #8aa3c8;
+  font-family: sans-serif, Helvetica, Verdana;
+  color: #c9e7f3;
+  background-color: #8aa3c8;
 }
 
 input[name=mobile] {
