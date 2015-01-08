@@ -32,7 +32,6 @@ ion.sound({
 // words array located in words.js
 var word;
 var incercari;
-var missArray;
 var charArray1;
 var charArray2;
 var missArray;
