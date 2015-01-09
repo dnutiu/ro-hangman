@@ -7,7 +7,7 @@
   <meta http-equiv="author" content="Niutenisu">
   <meta name="description" content="Spanzuratoarea in limba romana!">
   <meta name="keywords" content="spanzuratoarea, joc, gratuit, romana">
-  <meta name="viewport" content="width=device-width, initial-scale=0.9">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="stylesheet" type="text/css" href="styles/normalize.css">
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
@@ -94,7 +94,27 @@
       </p>
     </div>
   </footer>
-
+  <script>
+    // Sound initialization
+    ion.sound({
+        sounds: [{
+            name: "button_tiny",
+            volume: 0.8,
+            preload: true
+        }, {
+            name: "ta_da",
+            volume: 0.8,
+            preload: true
+        }, {
+            name: "sad_trombone",
+            volume: 0.8,
+            preload: true
+        }],
+        volume: 0.5,
+        path: "sound/sounds/",
+        preload: true
+    });
+  </script>
   <!--
 		<script type="text/javascript">
 		if (window.jQuery) {
