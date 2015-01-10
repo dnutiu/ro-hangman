@@ -1,131 +1,133 @@
 <!DOCTYPE HTML>
 <html>
-
-<head>
-  <title>Hagman</title>
-  <meta charset="utf-8">
-  <meta http-equiv="author" content="Niutenisu">
-  <meta name="description" content="Hangman!">
-  <meta name="keywords" content="hangman, game, free, online">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="../favicon.ico">
-  <link rel="stylesheet" type="text/css" href="../styles/normalize.css">
-  <link rel="stylesheet" type="text/css" href="../styles/styles.css">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="../sound/ion.sound.min.js"></script>
-  <script src="../js/words.js"></script>
-  <script src="../js/hangman.js"></script>
-  <script src="../js/main_en.js"></script>
-</head>
-
-
-<body>
-  <div id="content">
-    <h1>Hangman!</h1>
-    <div id="game" class="game" style="display: none;">
-      <div class="mobile">
-        <h3>Try to guess the word: <span class="word"></span></h3>
-        <h4>Type the letter here:</h4>
-        <input name="mobile" type="text">
-        <h4 class="litera_msg" style="display: none;">You pressed "<span class="litera" style="color: red;"></span>
-				<span class="litera_msg2"></span></h4>
-        <h4 class="litere" style="color: red;"></h4>
-        <select name="lista_cuvinte" class="change_words">
-          <option value="animale_eu">Animals from EU</option>
-          <option value="tari_eu">Country from EU</option>
-          <option value="firme">Companies</option>
-          <option value="ldp">Programming Languages</option>
-        </select>
-        <button class="">Switch</button>
-      </div>
-
-      <div id="left">
-        <h2>Try to guess the word: <span class="word"></span></h2>
-        <h3>Type a key, any key!</h3>
-        <br>
-        <h4 class="litera_msg" style="display: none;">You typed "<span class="litera red" style="color: red;"></span>"
-        <span class="litera_msg2"></span></h4>
-        <br>
-        <br>
-        <br>
-        <h4>Instructions:</h4>
-        <p>Try to guess the word, you have 6 tries before you lose.</p>
-        <br>
-        <br>
-        <h4 class="litere red"></h4>
-        <br>
-        <br>
-        <h4>Cuvinte:</h4>
-        <select name="lista_cuvinte" class="change_words">
-          <option value="animale_eu">Animals from EU</option>
-          <option value="tari_eu">Country from EU</option>
-          <option value="firme">Companies</option>
-          <option value="ldp">Programming Languages</option>
-        </select>
-        <button class="">Switch</button>
-      </div>
-      <div id="gamewon">
-        <p>Click the image to play again!</p>
-        <img src="../img/win.png" alt="Winner!" title="YOU'RE WINNER!">
-      </div>
-      <div id="gameover">
-        <p>Click the image to play again!</p>
-        <p>The word was: <span class="red" id="lose_word"></span>
-        </p>
-        <img src="../img/lose.png" alt="Loser!" title="YOU'RE LOSER!">
-      </div>
-      <div id="right">
-        <img id="hang" src="../img/hang.png">
-        <img id="human" src="../img/6.png">
-        <br>
-        <h3 id="incercari_msg">Life: <span id="incercari">6</span></h3>
-      </div>
-    </div>
-  </div>
-  <footer>
-    <div class="footer-content">
-      <p>
-        <span>Hangman</span>
-        <em>created by</em>
-        <span> @<a href="http://www.twitter.com/niutenisu">Niutenisu</a></span>
-      </p>
-      <p class="right">
-        <span><a href="https://github.com/niutenisu/ro-hangman/" alt="Github" title="Github Project Link">Github</a><span>
-      </p>
-    </div>
-  </footer>
-  <script>
-    // Sound initialization
-    ion.sound({
-        sounds: [{
-            name: "button_tiny",
-            volume: 0.8,
-            preload: true
-        }, {
-            name: "ta_da",
-            volume: 0.8,
-            preload: true
-        }, {
-            name: "sad_trombone",
-            volume: 0.8,
-            preload: true
-        }],
-        volume: 0.5,
-        path: "../sound/sounds/",
-        preload: true
-    });
-  </script>
-  <!--
-		<script type="text/javascript">
-		if (window.jQuery) {
-    		// jQuery is loaded
-    		alert("jQuery is loaded");
-		} else {
-    		// jQuery is not loaded
-    		alert("jQuery is not loaded");
-  </script>
-  }-->
-
-</body>
-
+    <head>
+        <title>Hagman</title>
+        <meta charset="utf-8">
+        <meta http-equiv="author" content="Niutenisu">
+        <meta name="description" content="Hangman!">
+        <meta name="keywords" content="hangman, game, free, online">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="../favicon.ico">
+        <link rel="stylesheet" type="text/css" href="../styles/normalize.css">
+        <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="../sound/ion.sound.min.js"></script>
+        <script src="../js/words.js"></script>
+        <script src="../js/hangman.js"></script>
+        <script src="../js/main_en.js"></script>
+    </head>
+    <body>
+        <div id="content">
+            <h1>Hangman!</h1>
+            <div id="game" class="game" style="display: none;">
+                <div class="mobile">
+                    <h3>Try to guess the word: <span class="word"></span></h3>
+                    <h4>Type the letter here:</h4>
+                    <input name="mobile" type="text">
+                    <h4 class="litera_msg" style="display: none;">You pressed "<span class="litera" style="color: red;"></span>
+                    <span class="litera_msg2"></span></h4>
+                    <h4 class="litere" style="color: red;"></h4>
+                    <select name="lista_cuvinte" class="change_words">
+                        <option value="animale_eu">Animals from EU</option>
+                        <option value="tari_eu">Country from EU</option>
+                        <option value="firme">Companies</option>
+                        <option value="ldp">Programming Languages</option>
+                    </select>
+                    <button class="">Switch</button>
+                </div>
+                <div id="left">
+                    <h2>Try to guess the word: <span class="word"></span></h2>
+                    <h3>Type a key, any key!</h3>
+                    <br>
+                    <h4 class="litera_msg" style="display: none;">You typed "<span class="litera red" style="color: red;"></span>"
+                    <span class="litera_msg2"></span></h4>
+                    <br>
+                    <br>
+                    <br>
+                    <h4>Instructions:</h4>
+                    <p>Try to guess the word, you have 6 tries before you lose.</p>
+                    <br>
+                    <br>
+                    <h4 class="litere red"></h4>
+                    <br>
+                    <br>
+                    <h4>Cuvinte:</h4>
+                    <select name="lista_cuvinte" class="change_words">
+                        <option value="animale_eu">Animals from EU</option>
+                        <option value="tari_eu">Country from EU</option>
+                        <option value="firme">Companies</option>
+                        <option value="ldp">Programming Languages</option>
+                    </select>
+                    <button class="">Switch</button>
+                </div>
+                <div id="gamewon">
+                    <p>Click the image to play again!</p>
+                    <img src="../img/win.png" alt="Winner!" title="YOU'RE WINNER!">
+                </div>
+                <div id="gameover">
+                    <p>Click the image to play again!</p>
+                    <p>The word was: <span class="red" id="lose_word"></span>
+                    </p>
+                    <img src="../img/lose.png" alt="Loser!" title="YOU'RE LOSER!">
+                </div>
+                <div id="right">
+                    <img id="hang" src="../img/hang.png">
+                    <img id="human" src="../img/6.png">
+                    <br>
+                    <h3 id="incercari_msg">Life: <span id="incercari">6</span></h3>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-content">
+                <p>
+                <span>Hangman</span>
+                <em>created by</em>
+                <span> @<a href="http://www.twitter.com/niutenisu">Niutenisu</a></span>
+                </p>
+                <p class="right">
+                <span><a href="https://github.com/niutenisu/ro-hangman/" alt="Github" title="Github Project Link">Github</a><span>
+                </p>
+            </div>
+            <div class="language_menu">
+                <a href="#">
+                <img src="../img/usa.png" alt="English Language" title="English" />
+                </a>
+                <a href="../index.html">
+                <img src="../img/ro.png" alt="Romanian Language" title="Romana" />
+                </a>
+            </div>
+        </footer>
+        <script>
+            // Sound initialization
+            ion.sound({
+                sounds: [{
+                    name: "button_tiny",
+                    volume: 0.8,
+                    preload: true
+                }, {
+                    name: "ta_da",
+                    volume: 0.8,
+                    preload: true
+                }, {
+                    name: "sad_trombone",
+                    volume: 0.8,
+                    preload: true
+                }],
+                volume: 0.5,
+                path: "../sound/sounds/",
+                preload: true
+            });
+        </script>
+        <!--
+        <script type="text/javascript">
+        if (window.jQuery) {
+        // jQuery is loaded
+        alert("jQuery is loaded");
+        } else {
+        // jQuery is not loaded
+        alert("jQuery is not loaded");
+        </script>
+        }-->
+    </body>
 </html>
